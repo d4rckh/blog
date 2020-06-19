@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Part 1 on how does the Network tab works in explorer"
+title:  "Part 1 on how does the Network tab work in explorer"
 date:   2020-06-18 19:24:55 -0700
 categories: windows research
 ---
