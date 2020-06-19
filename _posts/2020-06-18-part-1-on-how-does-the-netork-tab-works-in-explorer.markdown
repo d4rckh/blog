@@ -5,7 +5,7 @@ date:   2020-06-18 19:24:55 -0700
 categories: windows research
 ---
 
-I love researching Windows protocols, and that's how you do it too:
+I love researching Windows protocols, and that's how you can do it too:
 - Do stuff
 - Check Wireshark for packets
 - Google
