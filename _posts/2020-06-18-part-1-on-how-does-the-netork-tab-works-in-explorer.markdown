@@ -34,7 +34,7 @@ So I inspected it. And too be honest, I was surprised how juicy it is.
 
 ![image](/assets/images/network-explorer-browser-fields.png)
 
-But what made me interested was the `Host Comment` fields. What is it? Oh, I remember! It's my Computer's description!
+But what made me interested was the `Host Comment` field. What is it? Oh, I remember! It's my Computer's description!
 
 So I went, and changed it.
 
