@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hackthebox - Writeup"
-date:   2020-08-04 19:24:55 -0700
+date:   2020-08-03 19:24:55 -0700
 categories: htb
 tags: hackthebox writeup
 ---
