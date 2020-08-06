@@ -5,7 +5,9 @@
 layout: home
 ---
 
-Welcome to my blog! Click [here](/tag/posts) to visit a list of my posts
-
-Here are my latest posts:
--
+<ul>
+  {% for tag in site.tags %}
+  {% assign t = tag | first %}
+    <li><a href="/{{ site.tag_page_dir }}/{{ t | slugify: 'pretty' }}/">{{ t }}</a></li>
+  {% endfor %}
+</ul>

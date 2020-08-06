@@ -3,7 +3,7 @@ layout: post
 title:  "Part 1 on how does the Network tab work in explorer"
 date:   2020-06-18 19:24:55 -0700
 categories: windows research
-tags: posts
+tags: [posts, windows ]
 ---
 
 I love researching Windows protocols, and that's how you can do it too:
