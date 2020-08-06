@@ -4,6 +4,7 @@ permalink: /categories/
 title: Categories
 ---
 
+To search just press `CTRL` + `F` and type away a category or post name.
 
 <div id="archives">
 {% for category in site.categories %}
