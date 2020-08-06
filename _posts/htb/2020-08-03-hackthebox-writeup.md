@@ -3,7 +3,7 @@ layout: post
 title:  "Hackthebox - Writeup"
 date:   2020-08-03 19:24:55 -0700
 categories: htb
-tags: hackthebox writeup
+tags: posts hackthebox writeup 
 ---
 
 Today we will be solving **Writeup** from hackthebox which was an **easy** box

@@ -32,6 +32,11 @@ theme: minima
 plugins:
   - jekyll-feed
 
+collections:
+  tags:
+    output: true
+    permalink: tags/:path/
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -51,3 +56,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_feed_layout: tag_feed
+tag_feed_dir: tag
+tag_permalink_style: pretty

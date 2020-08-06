@@ -4,6 +4,7 @@ title:  "Hackthebox - Irked"
 date:   2020-08-04 19:24:55 -0700
 categories: htb
 tags: hackthebox writeup suid irc
+tags: posts
 ---
 
 In this post I will be showing you how to root the easy box on Hackthebox named Irked.

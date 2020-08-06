@@ -3,6 +3,7 @@ layout: post
 title:  "Part 3 on how does the Network tab work in explorer"
 date:   2020-06-18 20:49:00 -0700
 categories: windows research
+tags: posts
 ---
 
 This is the final and shortest blog post, I will showcasing my script to sniff `BROWSER` packets

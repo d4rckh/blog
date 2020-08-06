@@ -4,3 +4,8 @@
 
 layout: home
 ---
+
+Welcome to my blog! Click [here](/tag/posts) to visit a list of my posts
+
+Here are my latest posts:
+-
