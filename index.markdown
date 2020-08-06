@@ -5,9 +5,4 @@
 layout: home
 ---
 
-<ul>
-  {% for tag in site.tags %}
-  {% assign t = tag | first %}
-    <li><a href="/{{ site.tag_page_dir }}/{{ t | slugify: 'pretty' }}/">{{ t }}</a></li>
-  {% endfor %}
-</ul>
+Welcome to my blog, here's a [list of categories](/categories)

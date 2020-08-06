@@ -3,7 +3,6 @@ layout: post
 title:  "How to make windows look cleaner"
 date:   2020-06-18 20:49:00 -0700
 categories: windows
-tags: [posts, windows ]
 ---
 
 In this tutorial I will show you how to achieve the following using 2 simple and safe third party tools:
