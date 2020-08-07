@@ -5,6 +5,15 @@ title: Categories
 ---
 
 To search just press `CTRL` + `F` and type away a category or post name.
+<h2>Index</h2>
+<div id="index">
+{% for category in site.categories %}
+  <div class="index-group">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <a class="category-head" href="#{{ category_name }}">{{ category_name }}</a>
+  </div>
+{% endfor %}
+</div>
 
 <div id="archives">
 {% for category in site.categories %}
