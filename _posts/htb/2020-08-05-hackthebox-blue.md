@@ -5,6 +5,8 @@ date:   2020-08-05 19:24:55 -0700
 categories: hackthebox writeups eternalblue exploit
 ---
 
+This will post explain the root process of Blue on hackthebox using metasploit and without
+
 Running a simple nmap scan we can see quite a lot of ports open
 
 ```
