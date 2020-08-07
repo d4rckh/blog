@@ -3,6 +3,7 @@ layout: post
 title:  "Hackthebox - Irked"
 date:   2020-08-04 19:24:55 -0700
 categories: hackthebox writeups easy
+tags: ctf hackthebox irked nmap searchsploit exploit-db hexchat irc python steganography steghide ssh su shared-password metasploit exim oscp-like
 ---
 
 In this post I will be showing you how to root the easy box on Hackthebox named Irked.

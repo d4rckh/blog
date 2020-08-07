@@ -5,4 +5,4 @@
 layout: home
 ---
 
-Welcome to my blog, here's a [list of categories](/categories)
+Welcome to **d4rckh's blog**, here's a [list of tags](/tags) (eg: oscp-like, nmap, which will **help** you **learn** a specific **topic**)

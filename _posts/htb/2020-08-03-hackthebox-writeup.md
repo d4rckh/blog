@@ -3,6 +3,7 @@ layout: post
 title:  "Hackthebox - Writeup"
 date:   2020-08-03 19:24:55 -0700
 categories: hackthebox writeups easy
+tags: writeup ctf hackthebox nmap cmsms sqli credentials injection 
 ---
 
 Today we will be solving **Writeup** from hackthebox which was an **easy** box
