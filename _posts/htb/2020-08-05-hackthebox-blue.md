@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hackthebox - Blue"
-date:   2020-08-06 19:24:55 -0700
+date:   2020-08-05 19:24:55 -0700
 categories: hackthebox writeups eternalblue exploit
 ---
 
