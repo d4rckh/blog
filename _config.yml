@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: d4rckh is cool lol
+title: d4rckh
 email: admin@localhost
 description: >- # this means to ignore newlines until "baseurl:"
-  d4rckh's blog :D  
+  I post hackthebox writeups and random research
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: d4rckh
