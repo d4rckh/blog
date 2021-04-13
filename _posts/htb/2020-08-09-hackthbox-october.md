@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackthebox - October"
 date:   2020-08-08 19:24:55 -0700
-categories: hackthebox writeups medium
+categories: hackthebox_medium
 tags: hackthebox ctf october webshell ubuntu linux bof exploit file-upload nmap ret2libc  
 ---
 

@@ -2,7 +2,8 @@
 layout: post
 title:  "Part 2 on how does the Network tab work in explorer"
 date:   2020-06-18 19:49:00 -0700
-categories: windows research
+categories: windows_research
+tags: windows_research
 ---
 
 Today I want to find out why and what causes the **BROWSER** packets to broadcast.

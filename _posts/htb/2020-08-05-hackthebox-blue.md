@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackthebox - Blue"
 date:   2020-08-05 19:24:55 -0700
-categories: hackthebox writeups easy
+categories: hackthebox_easy
 tags: ctf hackthebox blue ms17_010 eternalblue metasploit
 ---
 

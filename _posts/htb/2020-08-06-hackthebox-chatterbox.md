@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackthebox - Chatterbox"
 date:   2020-08-06 19:24:55 -0700
-categories: hackthebox writeups medium
+categories: hackthebox_medium
 tags: hackthebox chatterbox ctf msfvenom meterpreter AChat AutoRunScript nishang oscp-like 
 ---
 

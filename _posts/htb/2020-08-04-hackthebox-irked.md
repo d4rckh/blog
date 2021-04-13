@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackthebox - Irked"
 date:   2020-08-04 19:24:55 -0700
-categories: hackthebox writeups easy
+categories: hackthebox_easy
 tags: ctf hackthebox irked nmap searchsploit exploit-db hexchat irc python steganography steghide ssh su shared-password metasploit exim oscp-like
 ---
 
