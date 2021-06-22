@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://example.com/</loc>
+         <loc>https://d4rckh.github.io/</loc>
          <lastmod>2021-06-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Advanced%20Tutorials/Windows/Building%20Windows%20PE/</loc>
+         <loc>https://d4rckh.github.io/Advanced%20Tutorials/Windows/Building%20Windows%20PE/</loc>
          <lastmod>2021-06-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Advanced%20Tutorials/Windows/Installing%20Windows%20manually/</loc>
+         <loc>https://d4rckh.github.io/Advanced%20Tutorials/Windows/Installing%20Windows%20manually/</loc>
          <lastmod>2021-06-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Personal%20Projects/Vaf%20-%20very%20advanced%20fuzzer/</loc>
+         <loc>https://d4rckh.github.io/Personal%20Projects/Vaf%20-%20very%20advanced%20fuzzer/</loc>
          <lastmod>2021-06-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Security/Beginner%20Resources/</loc>
+         <loc>https://d4rckh.github.io/Security/Beginner%20Resources/</loc>
          <lastmod>2021-06-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Security/Windows/Physical%20Access/Windows%20UAC%20Bypass/</loc>
+         <loc>https://d4rckh.github.io/Security/Windows/Physical%20Access/Windows%20UAC%20Bypass/</loc>
          <lastmod>2021-06-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Writeups/HackTheBox/Blue/</loc>
+         <loc>https://d4rckh.github.io/Writeups/HackTheBox/Blue/</loc>
          <lastmod>2021-06-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Writeups/HackTheBox/Chatterbox/</loc>
+         <loc>https://d4rckh.github.io/Writeups/HackTheBox/Chatterbox/</loc>
          <lastmod>2021-06-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
