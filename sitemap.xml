@@ -16,6 +16,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Personal%20Projects/Vaf%20-%20very%20advanced%20fuzzer/</loc>
+         <lastmod>2021-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Security/Beginner%20Resources/</loc>
+         <lastmod>2021-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Security/Windows/Physical%20Access/Windows%20UAC%20Bypass/</loc>
          <lastmod>2021-06-22</lastmod>
          <changefreq>daily</changefreq>
