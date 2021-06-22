@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/Advanced%20Misc/Windows/Building%20Windows%20PE/">
+        <link rel="canonical" href="https://example.com/Advanced%20Tutorials/Windows/Installing%20Windows%20manually/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>Building Windows PE - d4rckh</title>
+        <title>Installing Windows manually - d4rckh</title>
       
     
     
@@ -77,11 +77,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#building-windows-pe" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -108,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Building Windows PE
+              Installing Windows manually
             
           </span>
         </div>
@@ -155,6 +150,107 @@
       
       
         
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Main Page
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Building%20Windows%20PE/" class="md-tabs__link md-tabs__link--active">
+        Advanced Tutorials
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Personal%20Projects/Vaf%20-%20very%20advanced%20fuzzer/" class="md-tabs__link">
+        Personal Projects
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Security/Beginner%20Resources/" class="md-tabs__link">
+        Security
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Writeups/HackTheBox/Blue/" class="md-tabs__link">
+        Writeups
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
@@ -166,8 +262,10 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="d4rckh" class="md-nav__button md-logo" aria-label="d4rckh" data-md-component="logo">
       
@@ -205,21 +303,19 @@
   
   
     
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
-        Advanced Misc
+        Advanced Tutorials
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Advanced Misc" data-md-level="1">
+      <nav class="md-nav" aria-label="Advanced Tutorials" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Advanced Misc
+          Advanced Tutorials
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -230,7 +326,9 @@
   
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
@@ -249,6 +347,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Building%20Windows%20PE/" class="md-nav__link">
+        Building Windows PE
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -257,82 +367,11 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Building Windows PE
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Building Windows PE
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creating-working-files" class="md-nav__link">
-    Creating Working Files
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-bootable-media" class="md-nav__link">
-    Creating a bootable media
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating a bootable media">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-bootable-usb-drive" class="md-nav__link">
-    Creating a bootable USB drive
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-bootable-iso" class="md-nav__link">
-    Creating a bootable ISO
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Installing%20Windows%20manually/" class="md-nav__link">
         Installing Windows manually
       </a>
+      
     </li>
   
 
@@ -357,9 +396,7 @@
   
   
     
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
@@ -401,9 +438,7 @@
   
   
     
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
@@ -436,7 +471,9 @@
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
@@ -511,9 +548,7 @@
   
   
     
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
@@ -534,7 +569,9 @@
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
@@ -593,92 +630,61 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creating-working-files" class="md-nav__link">
-    Creating Working Files
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-bootable-media" class="md-nav__link">
-    Creating a bootable media
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating a bootable media">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-bootable-usb-drive" class="md-nav__link">
-    Creating a bootable USB drive
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-bootable-iso" class="md-nav__link">
-    Creating a bootable ISO
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <h1 id="building-windows-pe">Building Windows PE</h1>
-<p>Building Windows PE is really simple. There are only few commands you will have to run.</p>
-<p>Perequisites:</p>
-<ul>
-<li><a href="https://go.microsoft.com/fwlink/?linkid=2120254">Windows ADK</a></li>
-<li><a href="https://go.microsoft.com/fwlink/?linkid=2120253">Windows PE Addon for ADK</a></li>
-</ul>
-<h2 id="creating-working-files">Creating Working Files</h2>
-<p>Open <code>Deployment and Imaging Tools Environment</code> as administrator and run the command below, make sure the directory you are copying to does not exist, <strong>copype</strong> will create it for you.</p>
-<pre><code class="language-batch">copype amd64 C:\WinPE_amd64
-</code></pre>
-<h2 id="creating-a-bootable-media">Creating a bootable media</h2>
-<p>Here you have 2 options.</p>
-<h3 id="creating-a-bootable-usb-drive">Creating a bootable USB drive</h3>
-<p>To create a bootable USB drive you will have to run the following in <code>Deployment and Imaging Tools Environment</code>:</p>
-<pre><code class="language-batch">MakeWinPEMedia /UFD C:\WinPE_amd64 P:
-</code></pre>
-<h3 id="creating-a-bootable-iso">Creating a bootable ISO</h3>
-<p>To create a bootable ISO you will have to run the following in <code>Deployment and Imaging Tools Environment</code>:</p>
-<pre><code class="language-batch">MakeWinPEMedia /ISO C:\WinPE_amd64 C:\WinPE_amd64\WinPE_amd64.iso
-</code></pre>
+                  <h1>Installing Windows manually</h1>
+                
+                <ol>
+<li>Get a USB flash drive and download the Windows 10 ISO. This can be done by going to https://www.microsoft.com/en-us/software-download/windows10 (You can use an agent-switcher if you don't want to use their tool) and getting the ISO.</li>
+<li>Go to https://rufus.ie/ for Windows users, for Linux users use WoeUSB, from https://github.com/slacka/WoeUSB. Download either Rufus or WoeUSB.</li>
+<li>For Rufus users, select your USB drive under "Device." Then press "SELECT" and find your ISO file. Next hit "START."</li>
+<li>For WoeUSB users, navigate to the ISO image from the program then select USB device and hit "Install."</li>
+<li>After that is done, reboot your computer and boot the USB flash drive. (The boot menu can be F9, or many others so look up your device for more information).</li>
+<li>Now press Shift+F10 to bring up a terminal.</li>
+<li>Now is a good time to turn back if you don't know what you're doing! Type "diskpart" (without quotes) into the command prompt. Next I like to do a "list disk" so I can find what disk I want to install to.</li>
+<li>Type "select disk X" (replace X with your disk number found from list disk).</li>
+<li>Type "clean" THIS WILL WIPE YOUR DISK!!!</li>
+<li>Type "convert gpt" This converts your MBR drive to be a GPT drive.</li>
+<li>Type "create part efi size=500" This will make a partition that is 500MB.</li>
+<li>Type "format fs=fat32 quick" This will format your new partition to be fat32.</li>
+<li>Type "assign letter w" This assigns a drive letter to the efi partition.</li>
+<li>Type "create part primary" This is your primary partition. Windows will be installed to it. It will use the remainder of the disk.</li>
+<li>Type "format fs=ntfs quick" This makes your new partition NTFS.</li>
+<li>Type "assign letter c" In my case, this was already taken. If that happens to you, type "list volume" and see what drive has the c drive. After you find it type "select volume X" (replace X with volume number). Now type "remove letter=C" then after that, type "select disk X" and then "select part 2"</li>
+<li>Now you can type "exit" This closes diskpart.</li>
+<li>Type "cd /d D:\sources" This drive letter could be different for you. For me it was F, for example. If that is the case for you, go back into diskpart and type "list volume" and find the correct letter (not C: or W:)</li>
+<li>Type "dism /apply-image /imagefile:install.wim /index:1 /applydir:C:\" This might take a few minutes.</li>
+<li>Type "bcdboot C:\Windows /s W:" This creates necessary boot files.</li>
+<li>Type "regedit" Now we are in the registry! Even though it might look very complicated, just follow my steps and you will be fine.</li>
+<li>Click on "HKEY_LOCAL_MACHINE" and then click file &gt;&gt; Load Hive...</li>
+<li>In File name: type "C:\windows\system32\config" then press enter.</li>
+<li>Now select SOFTWARE then click open.</li>
+<li>Name it SOFT</li>
+<li>Go back into Load Hive and select SYSTEM then open, name it SYS.</li>
+<li>Now navigate to "HKEY_LOCAL_MACHINE\SOFT\Microsoft\Windows\CurrentVersion\Policies\System"</li>
+<li>Right click, New &gt;&gt; DWORD (32-bit) Value, name it "VerboseStatus" (Case sensitive). Double click it, switch it's value to 1.</li>
+<li>Double click "EnableCursorSuppression" Change the value to 0.</li>
+<li>Navigate to "HKEY_LOCAL_MACHINE\SYS\Setup"</li>
+<li>Double click "CmdLine" and change the text string to "cmd.exe"</li>
+<li>Close the Registry editor and then type "wpeutil reboot" to restart your computer.</li>
+<li>Wait for the setup to put a command prompt up then type "oobe\windeploy"</li>
+<li>Wait for it to say "Getting ready" then type "net user /add USERNAME" (Yes, you can change USERNAME to whatever you want).</li>
+<li>Type "net localgroup /add users USERNAME"</li>
+<li>Type "net localgroup /add administrators USERNAME"</li>
+<li>Now type "regedit" You thought we were done with it ;)</li>
+<li>Now navigate to "HKEY_LOCAL_MACHINE\SYSTEM\Setup"</li>
+<li>Double click "OOBEInProgress" and change the value to 0.
+Change "SetupType" to 0.</li>
+<li>Change "SystemSetupInProgress" to 0.
+Close regedit and type exit.</li>
+<li>This part will vary for different people, for me it instantly came up with "Choose privacy settings for your device" but it can be different for you. If it says "Please wait for the Windows Modules Installer" Then wait for at least 5 minutes, then force reboot your computer by holding down the power button. It seems to never leave that screen. According to enderman it "works most of the time."</li>
+<li>Choose your privacy settings then you're done! You have now successfully manually installed Windows 10!</li>
+</ol>
+<p><a href="https://www.reddit.com/r/Windows10/comments/glaio4/how_to_manually_install_windows_10/">Original Post</a></p>
                 
               
               
@@ -698,7 +704,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Main Page" rel="prev">
+        <a href="../Building%20Windows%20PE/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Building Windows PE" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -707,20 +713,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Main Page
+              Building Windows PE
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Installing%20Windows%20manually/" class="md-footer__link md-footer__link--next" aria-label="Next: Installing Windows manually" rel="next">
+        <a href="../../../Personal%20Projects/Vaf%20-%20very%20advanced%20fuzzer/" class="md-footer__link md-footer__link--next" aria-label="Next: vaf" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Installing Windows manually
+              vaf
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -749,7 +755,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.76f349be.min.js"></script>
