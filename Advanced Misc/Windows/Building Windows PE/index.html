@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/Writeups/HackTheBox/Blue/">
+        <link rel="canonical" href="https://example.com/Advanced%20Misc/Windows/Building%20Windows%20PE/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>Blue - d4rckh</title>
+        <title>Building Windows PE - d4rckh</title>
       
     
     
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#metasploit-way" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blue
+              Building Windows PE
             
           </span>
         </div>
@@ -197,14 +192,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Advanced Misc
@@ -220,12 +217,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
       <label class="md-nav__link" for="__nav_2_1">
         Windows
@@ -241,11 +240,19 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../Advanced%20Misc/Windows/Building%20Windows%20PE/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Building Windows PE
       </a>
+      
     </li>
   
 
@@ -255,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced%20Misc/Windows/Installing%20Windows%20manually/" class="md-nav__link">
+      <a href="../Installing%20Windows%20manually/" class="md-nav__link">
         Installing Windows manually
       </a>
     </li>
@@ -378,16 +385,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
         Writeups
@@ -403,14 +408,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
       
       <label class="md-nav__link" for="__nav_4_1">
         HackTheBox
@@ -426,21 +429,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Writeups/HackTheBox/Blue/" class="md-nav__link">
         Blue
       </a>
-      
     </li>
   
 
@@ -450,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Chatterbox/" class="md-nav__link">
+      <a href="../../../Writeups/HackTheBox/Chatterbox/" class="md-nav__link">
         Chatterbox
       </a>
     </li>
@@ -476,52 +469,15 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <p>This post will explain the root process of Blue on hackthebox using metasploit and without</p>
-<p>Running a simple nmap scan we can see quite a lot of ports open</p>
-<pre><code>$ nmap -A -T4 -p- 10.10.10.40
-</code></pre>
-<p><img alt="image" src="htb_blue_ports.png" /></p>
-<p>We can see rpc, netbios and microsoft-ds</p>
-<p>On port 445 we can see SMB running, nmap tells us the box runs <code>Windows 7 Professional SP1</code> and that the box is in a workgroup</p>
-<p>Nmap also ran some scripts for us which tells us the hostname and more useful information like if message_signing is enabled (which won't help us in this case, but it's a good thing to know)</p>
-<p><img alt="image" src="htb_blue_scripts.png" /></p>
-<p>As the name suggest this box is probably vulnerable to ms17_010 which is Eternal Blue</p>
-<h1 id="metasploit-way">Metasploit way</h1>
-<p>We can verify that the box is vulnerable using the <code>use auxiliary/scanner/smb/smb_ms17_010</code> metasploit module and setting <code>RHOSTS</code> to <code>10.10.10.40</code></p>
-<p>After verifying this box is vulnerable to eternal blue we can start exploiting it using metasploit's <code>exploit/windows/smb/ms17_010_externalblue</code> module, do not forget to set the host to <code>10.10.10.40</code></p>
-<p>Looking at the options on the metasploit module we can see by default <code>generic/shell_reverse_tcp</code> which is an unstaged payload, it's also a generic shell and it won't result in a meterpreter shell. We could change it to <code>windows/x64/meterpreter/reverse_tcp</code> by changing <code>payload</code> using <code>set</code>. This <strong>will</strong> result in a meterpreter shell, making things easier.</p>
-<blockquote>
-<p><strong>WARNING</strong>: This exploit might crash the target machine.</p>
-</blockquote>
-<p>After getting the meterpreter shell we can check using <code>getuid</code> that we are authority system.</p>
-<h1 id="manual-way">Manual way</h1>
-<p><strong>AutoBlue</strong> is a nice way to exploit eternal blue manually, it is located @ <a href="https://github.com/3ndG4me/autoblue-ms17-010">https://github.com/3ndG4me/autoblue-ms17-010</a> on github. (Just follow the instructions on the readme)</p>
-<blockquote>
-<p><strong>WARNING</strong>: This exploit also might crash the target machine.</p>
-</blockquote>
+                  <h1>Building Windows PE</h1>
+                
+                <p>to do</p>
                 
               
               
@@ -541,7 +497,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../../Security/Windows/Physical%20Access/Windows%20UAC%20Bypass/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Windows UAC Bypass" rel="prev">
+        <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Main Page" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -550,20 +506,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Windows UAC Bypass
+              Main Page
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Chatterbox/" class="md-footer__link md-footer__link--next" aria-label="Next: Chatterbox" rel="next">
+        <a href="../Installing%20Windows%20manually/" class="md-footer__link md-footer__link--next" aria-label="Next: Installing Windows manually" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Chatterbox
+              Installing Windows manually
             </div>
           </div>
           <div class="md-footer__button md-icon">

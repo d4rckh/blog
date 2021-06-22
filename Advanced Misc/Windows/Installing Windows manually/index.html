@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/Writeups/HackTheBox/Blue/">
+        <link rel="canonical" href="https://example.com/Advanced%20Misc/Windows/Installing%20Windows%20manually/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>Blue - d4rckh</title>
+        <title>Installing Windows manually - d4rckh</title>
       
     
     
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#metasploit-way" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blue
+              Installing Windows manually
             
           </span>
         </div>
@@ -197,14 +192,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Advanced Misc
@@ -220,12 +217,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
       <label class="md-nav__link" for="__nav_2_1">
         Windows
@@ -243,7 +242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced%20Misc/Windows/Building%20Windows%20PE/" class="md-nav__link">
+      <a href="../Building%20Windows%20PE/" class="md-nav__link">
         Building Windows PE
       </a>
     </li>
@@ -253,11 +252,19 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../Advanced%20Misc/Windows/Installing%20Windows%20manually/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Installing Windows manually
       </a>
+      
     </li>
   
 
@@ -378,16 +385,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
         Writeups
@@ -403,14 +408,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
       
       <label class="md-nav__link" for="__nav_4_1">
         HackTheBox
@@ -426,21 +429,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Writeups/HackTheBox/Blue/" class="md-nav__link">
         Blue
       </a>
-      
     </li>
   
 
@@ -450,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Chatterbox/" class="md-nav__link">
+      <a href="../../../Writeups/HackTheBox/Chatterbox/" class="md-nav__link">
         Chatterbox
       </a>
     </li>
@@ -476,52 +469,61 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <p>This post will explain the root process of Blue on hackthebox using metasploit and without</p>
-<p>Running a simple nmap scan we can see quite a lot of ports open</p>
-<pre><code>$ nmap -A -T4 -p- 10.10.10.40
-</code></pre>
-<p><img alt="image" src="htb_blue_ports.png" /></p>
-<p>We can see rpc, netbios and microsoft-ds</p>
-<p>On port 445 we can see SMB running, nmap tells us the box runs <code>Windows 7 Professional SP1</code> and that the box is in a workgroup</p>
-<p>Nmap also ran some scripts for us which tells us the hostname and more useful information like if message_signing is enabled (which won't help us in this case, but it's a good thing to know)</p>
-<p><img alt="image" src="htb_blue_scripts.png" /></p>
-<p>As the name suggest this box is probably vulnerable to ms17_010 which is Eternal Blue</p>
-<h1 id="metasploit-way">Metasploit way</h1>
-<p>We can verify that the box is vulnerable using the <code>use auxiliary/scanner/smb/smb_ms17_010</code> metasploit module and setting <code>RHOSTS</code> to <code>10.10.10.40</code></p>
-<p>After verifying this box is vulnerable to eternal blue we can start exploiting it using metasploit's <code>exploit/windows/smb/ms17_010_externalblue</code> module, do not forget to set the host to <code>10.10.10.40</code></p>
-<p>Looking at the options on the metasploit module we can see by default <code>generic/shell_reverse_tcp</code> which is an unstaged payload, it's also a generic shell and it won't result in a meterpreter shell. We could change it to <code>windows/x64/meterpreter/reverse_tcp</code> by changing <code>payload</code> using <code>set</code>. This <strong>will</strong> result in a meterpreter shell, making things easier.</p>
-<blockquote>
-<p><strong>WARNING</strong>: This exploit might crash the target machine.</p>
-</blockquote>
-<p>After getting the meterpreter shell we can check using <code>getuid</code> that we are authority system.</p>
-<h1 id="manual-way">Manual way</h1>
-<p><strong>AutoBlue</strong> is a nice way to exploit eternal blue manually, it is located @ <a href="https://github.com/3ndG4me/autoblue-ms17-010">https://github.com/3ndG4me/autoblue-ms17-010</a> on github. (Just follow the instructions on the readme)</p>
-<blockquote>
-<p><strong>WARNING</strong>: This exploit also might crash the target machine.</p>
-</blockquote>
+                  <h1>Installing Windows manually</h1>
+                
+                <ol>
+<li>Get a USB flash drive and download the Windows 10 ISO. This can be done by going to https://www.microsoft.com/en-us/software-download/windows10 (You can use an agent-switcher if you don't want to use their tool) and getting the ISO.</li>
+<li>Go to https://rufus.ie/ for Windows users, for Linux users use WoeUSB, from https://github.com/slacka/WoeUSB. Download either Rufus or WoeUSB.</li>
+<li>For Rufus users, select your USB drive under "Device." Then press "SELECT" and find your ISO file. Next hit "START."</li>
+<li>For WoeUSB users, navigate to the ISO image from the program then select USB device and hit "Install."</li>
+<li>After that is done, reboot your computer and boot the USB flash drive. (The boot menu can be F9, or many others so look up your device for more information).</li>
+<li>Now press Shift+F10 to bring up a terminal.</li>
+<li>Now is a good time to turn back if you don't know what you're doing! Type "diskpart" (without quotes) into the command prompt. Next I like to do a "list disk" so I can find what disk I want to install to.</li>
+<li>Type "select disk X" (replace X with your disk number found from list disk).</li>
+<li>Type "clean" THIS WILL WIPE YOUR DISK!!!</li>
+<li>Type "convert gpt" This converts your MBR drive to be a GPT drive.</li>
+<li>Type "create part efi size=500" This will make a partition that is 500MB.</li>
+<li>Type "format fs=fat32 quick" This will format your new partition to be fat32.</li>
+<li>Type "assign letter w" This assigns a drive letter to the efi partition.</li>
+<li>Type "create part primary" This is your primary partition. Windows will be installed to it. It will use the remainder of the disk.</li>
+<li>Type "format fs=ntfs quick" This makes your new partition NTFS.</li>
+<li>Type "assign letter c" In my case, this was already taken. If that happens to you, type "list volume" and see what drive has the c drive. After you find it type "select volume X" (replace X with volume number). Now type "remove letter=C" then after that, type "select disk X" and then "select part 2"</li>
+<li>Now you can type "exit" This closes diskpart.</li>
+<li>Type "cd /d D:\sources" This drive letter could be different for you. For me it was F, for example. If that is the case for you, go back into diskpart and type "list volume" and find the correct letter (not C: or W:)</li>
+<li>Type "dism /apply-image /imagefile:install.wim /index:1 /applydir:C:\" This might take a few minutes.</li>
+<li>Type "bcdboot C:\Windows /s W:" This creates necessary boot files.</li>
+<li>Type "regedit" Now we are in the registry! Even though it might look very complicated, just follow my steps and you will be fine.</li>
+<li>Click on "HKEY_LOCAL_MACHINE" and then click file &gt;&gt; Load Hive...</li>
+<li>In File name: type "C:\windows\system32\config" then press enter.</li>
+<li>Now select SOFTWARE then click open.</li>
+<li>Name it SOFT</li>
+<li>Go back into Load Hive and select SYSTEM then open, name it SYS.</li>
+<li>Now navigate to "HKEY_LOCAL_MACHINE\SOFT\Microsoft\Windows\CurrentVersion\Policies\System"</li>
+<li>Right click, New &gt;&gt; DWORD (32-bit) Value, name it "VerboseStatus" (Case sensitive). Double click it, switch it's value to 1.</li>
+<li>Double click "EnableCursorSuppression" Change the value to 0.</li>
+<li>Navigate to "HKEY_LOCAL_MACHINE\SYS\Setup"</li>
+<li>Double click "CmdLine" and change the text string to "cmd.exe"</li>
+<li>Close the Registry editor and then type "wpeutil reboot" to restart your computer.</li>
+<li>Wait for the setup to put a command prompt up then type "oobe\windeploy"</li>
+<li>Wait for it to say "Getting ready" then type "net user /add USERNAME" (Yes, you can change USERNAME to whatever you want).</li>
+<li>Type "net localgroup /add users USERNAME"</li>
+<li>Type "net localgroup /add administrators USERNAME"</li>
+<li>Now type "regedit" You thought we were done with it ;)</li>
+<li>Now navigate to "HKEY_LOCAL_MACHINE\SYSTEM\Setup"</li>
+<li>Double click "OOBEInProgress" and change the value to 0.
+Change "SetupType" to 0.</li>
+<li>Change "SystemSetupInProgress" to 0.
+Close regedit and type exit.</li>
+<li>This part will vary for different people, for me it instantly came up with "Choose privacy settings for your device" but it can be different for you. If it says "Please wait for the Windows Modules Installer" Then wait for at least 5 minutes, then force reboot your computer by holding down the power button. It seems to never leave that screen. According to enderman it "works most of the time."</li>
+<li>Choose your privacy settings then you're done! You have now successfully manually installed Windows 10!</li>
+</ol>
+<p>C: https://www.reddit.com/r/Windows10/comments/glaio4/how_to_manually_install_windows_10/</p>
                 
               
               
@@ -541,7 +543,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../../Security/Windows/Physical%20Access/Windows%20UAC%20Bypass/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Windows UAC Bypass" rel="prev">
+        <a href="../Building%20Windows%20PE/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Building Windows PE" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -550,20 +552,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Windows UAC Bypass
+              Building Windows PE
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Chatterbox/" class="md-footer__link md-footer__link--next" aria-label="Next: Chatterbox" rel="next">
+        <a href="../../../Security/Windows/Physical%20Access/Windows%20UAC%20Bypass/" class="md-footer__link md-footer__link--next" aria-label="Next: Windows UAC Bypass" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Chatterbox
+              Windows UAC Bypass
             </div>
           </div>
           <div class="md-footer__button md-icon">
