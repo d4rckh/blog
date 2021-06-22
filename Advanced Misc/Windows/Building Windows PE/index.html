@@ -25,6 +25,10 @@
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
         
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
       
     
     
@@ -63,7 +67,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
   
     
     <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
@@ -72,6 +76,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#building-windows-pe" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -248,10 +257,69 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Building Windows PE
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Building Windows PE
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-working-files" class="md-nav__link">
+    Creating Working Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-bootable-media" class="md-nav__link">
+    Creating a bootable media
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a bootable media">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-bootable-usb-drive" class="md-nav__link">
+    Creating a bootable USB drive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-bootable-iso" class="md-nav__link">
+    Creating a bootable ISO
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -469,15 +537,92 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-working-files" class="md-nav__link">
+    Creating Working Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-bootable-media" class="md-nav__link">
+    Creating a bootable media
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a bootable media">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-bootable-usb-drive" class="md-nav__link">
+    Creating a bootable USB drive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-bootable-iso" class="md-nav__link">
+    Creating a bootable ISO
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Building Windows PE</h1>
-                
-                <p>to do</p>
+                <h1 id="building-windows-pe">Building Windows PE</h1>
+<p>Building Windows PE is really simple. There are only few commands you will have to run.</p>
+<p>Perequisites:</p>
+<ul>
+<li><a href="https://go.microsoft.com/fwlink/?linkid=2120254">Windows ADK</a></li>
+<li><a href="https://go.microsoft.com/fwlink/?linkid=2120253">Windows PE Addon for ADK</a></li>
+</ul>
+<h2 id="creating-working-files">Creating Working Files</h2>
+<p>Open <code>Deployment and Imaging Tools Environment</code> as administrator and run the command below, make sure the directory you are copying to does not exist, <strong>copype</strong> will create it for you.</p>
+<pre><code class="language-batch">copype amd64 C:\WinPE_amd64
+</code></pre>
+<h2 id="creating-a-bootable-media">Creating a bootable media</h2>
+<p>Here you have 2 options.</p>
+<h3 id="creating-a-bootable-usb-drive">Creating a bootable USB drive</h3>
+<p>To create a bootable USB drive you will have to run the following in <code>Deployment and Imaging Tools Environment</code>:</p>
+<pre><code class="language-batch">MakeWinPEMedia /UFD C:\WinPE_amd64 P:
+</code></pre>
+<h3 id="creating-a-bootable-iso">Creating a bootable ISO</h3>
+<p>To create a bootable ISO you will have to run the following in <code>Deployment and Imaging Tools Environment</code>:</p>
+<pre><code class="language-batch">MakeWinPEMedia /ISO C:\WinPE_amd64 C:\WinPE_amd64\WinPE_amd64.iso
+</code></pre>
                 
               
               
