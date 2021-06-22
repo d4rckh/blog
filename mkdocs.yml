@@ -1,0 +1,6 @@
+site_name: d4rckh
+site_url: https://example.com/
+theme:
+  name: material
+  features:
+    - navigation.sections
